@@ -39,6 +39,14 @@
       "template": "{file:.claude/commands/html-report.md}",
       "description": "Generate application tracker dashboard"
     },
+    "gmail-sync": {
+      "template": "{file:.claude/commands/gmail-sync.md}",
+      "description": "Detect application status from Gmail"
+    },
+    "notion-sync": {
+      "template": "{file:.claude/commands/notion-sync.md}",
+      "description": "Sync pipeline to Notion database"
+    },
     "add-portal": {
       "template": "{file:.claude/commands/add-portal.md}",
       "description": "Register a new job portal"
