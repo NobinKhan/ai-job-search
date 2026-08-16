@@ -4,15 +4,23 @@ Step-by-step instructions for getting the AI Job Search framework running.
 
 ## 1. Prerequisites
 
-### Claude Code
+### Claude Code or OpenCode
 
-Install Claude Code (Anthropic's CLI for Claude):
+Install one of the supported CLI tools:
 
+**Claude Code** (Anthropic's CLI for Claude):
 ```bash
 npm install -g @anthropic-ai/claude-code
 ```
 
 You'll need an Anthropic API key or a Claude Pro/Team subscription. See the [Claude Code docs](https://docs.anthropic.com/en/docs/claude-code) for details.
+
+**OpenCode** (alternative CLI):
+```bash
+npm install -g opencode
+```
+
+See the [OpenCode docs](https://opencode.ai) for setup details. OpenCode reads the same `.claude/` workflow files via `opencode.json` — no parallel config tree needed.
 
 ### Python
 
@@ -187,10 +195,16 @@ If you're outside Denmark, you can generate an equivalent search skill for your 
 
 ## 4. Run the setup interview
 
-Start Claude Code in the repository:
+Start your CLI in the repository:
 
+Claude Code:
 ```bash
 claude
+```
+
+OpenCode:
+```bash
+opencode
 ```
 
 Then run the onboarding:
@@ -199,7 +213,7 @@ Then run the onboarding:
 /setup
 ```
 
-Claude will offer three paths:
+The command works identically in both CLIs — same workflow file, same three paths:
 
 - **Path A (documents folder):** Add your CV, LinkedIn export, diplomas, references, or past applications under `documents/`. Claude reads and cross-references them before proposing profile updates. This is best when you have several source files.
 - **Path B (single CV import):** Share one CV/resume by mentioning the file with `@` or pasting the text. Claude extracts it and asks follow-up questions for anything missing.
@@ -259,7 +273,7 @@ Or paste the job description directly:
 /apply [paste job posting text here]
 ```
 
-Claude will:
+Claude (or OpenCode) will:
 1. Evaluate the fit against your profile
 2. Ask if you want to proceed
 3. Draft a tailored CV and cover letter
