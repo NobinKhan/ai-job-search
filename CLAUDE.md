@@ -1,10 +1,6 @@
-# Job Application Assistant for [YOUR_NAME]
+# Job Application Assistant for MD. Nazrul Islam Khan
 
-<!-- SETUP: This file is populated by running /setup -->
-<!-- After running /setup, all [PLACEHOLDER] tokens will be replaced with your actual information -->
-
-## Role
-This repo is a job application workspace. Claude acts as a career advisor and application assistant for [YOUR_NAME], helping with:
+This repo is a job application workspace. Claude acts as a career advisor and application assistant for MD. Nazrul Islam Khan, helping with:
 1. **Job fit evaluation** - Assess job postings against your profile (skills, experience, behavioral traits)
 2. **CV tailoring** - Adapt existing CV templates (LaTeX/moderncv) to target specific roles
 3. **Cover letter writing** - Draft targeted cover letters using existing templates (LaTeX)
@@ -13,79 +9,96 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 
 ## Candidate Profile
 
-<!-- This section is auto-populated by /setup. You can also fill it in manually. -->
-
 ### Identity
-- **Name:** [YOUR_NAME]
-- **Location:** [YOUR_CITY], [YOUR_COUNTRY] ([YOUR_COMMUTE_CONSTRAINTS])
+- **Name:** MD. Nazrul Islam Khan
+- **Location:** Dhaka, Bangladesh (commute: within Dhaka metro)
 - **Languages:**
   | Language | Level |
   |----------|-------|
-  | [LANGUAGE] | [LEVEL] |
-  <!-- Every language you work in professionally, with your level (CEFR, "native," "professional
-  working proficiency," whatever your CV/LinkedIn use - no need to force it into one scale). An
-  undeclared language is a hard deal-breaker if a posting requires it; a declared language at a
-  lower level than a posting wants is flagged for your own judgment, not auto-rejected. See
-  04-job-evaluation.md's Language Gate. -->
-- **CV language:** [YOUR_CV_LANGUAGE] <!-- English unless your market expects otherwise; /setup asks -->
+  | English | Professional working proficiency (C1) |
+  | Bengali | Native |
+  <!-- Every language you work in professionally, with your level. An undeclared language is a hard deal-breaker if a posting requires it; a declared language at a lower level than a posting wants is flagged for your own judgment. See 04-job-evaluation.md's Language Gate. -->
+- **CV language:** English
 
-- **Status:** [YOUR_EMPLOYMENT_STATUS]
-- **LinkedIn headline:** "[YOUR_LINKEDIN_HEADLINE]"
+- **Status:** Actively seeking Backend Engineer roles
+- **LinkedIn headline:** "Backend & DevOps Engineer"
 
 ### Education
-<!-- List your degrees, most recent first -->
-- **[DEGREE_LEVEL] in [FIELD]** ([YEAR_START]-[YEAR_END]) - [INSTITUTION]
-  - Thesis: "[THESIS_TITLE]"
-  - Topics: [KEY_TOPICS]
+- **BSc in Computer Science and Engineering** (2014-2018) - Shanto-Mariam University of Creative Technology
+  - Topics: Data structures, algorithms, database systems, software engineering, computer networks, operating systems
 
 ### Professional Experience
-<!-- List your roles, most recent first -->
-- **[JOB_TITLE]** ([START_DATE] - [END_DATE]) - **[COMPANY]** ([LOCATION])
-  - [KEY_RESPONSIBILITY_1]
-  - [KEY_RESPONSIBILITY_2]
-  - [KEY_ACHIEVEMENT]
+- **Backend & DevOps Developer** (Sep 2025 – Present) - Flyger Holidays Limited (Bangladesh)
+  - Architecting and building a microservices-based Learning Management System (LMS)
+  - Deploying and operating services on a 5-node k3s cluster using FluxCD, CloudNativePG, Infisical
+  - Implementing Kubernetes-native infrastructure, service routing, and load-balancing strategies
+
+- **Backend Developer** (Jul 2023 – Sep 2025) - Care-Box Limited (Dhaka, Bangladesh)
+  - Migrated monolithic e-commerce to Dockerized microservices on AWS ECS, scaling 10k→50k concurrent users
+  - Reduced API latency by 42% via Celery/Redis async processing and PostgreSQL optimization
+  - Built GitHub Actions + Argo CD CI/CD pipelines, increasing deployment frequency to multiple times/day
+  - Led 6-member backend squad; reduced cloud spend by ~25% via EC2/RDS right-sizing + spot nodes
+  - Automated blue-green deployments, cutting rollback time from 15 min to under 2 min
+
+- **Junior Backend Developer** (Sep 2022 – Jul 2023) - Care-Box Limited (Dhaka, Bangladesh)
+  - Built RFID warehouse tracking system for Singapore government (RBITS PUB) using Django, PostgreSQL, Redis
+  - Delivered live doctor consultation platform with OAuth2 auth and SSLCommerz payments
+  - Introduced Celery workers, reducing checkout time by 35%; set up GitLab CI pipelines
+
+- **Backend Developer Intern** (Jul 2022 – Sep 2022) - Care-Box Limited (Dhaka, Bangladesh)
+  - Developed RESTful APIs with Django REST Framework for catalog/cart/checkout modules
+  - Optimized GraphQL queries, reducing payload size by 60% and page load time by 1.2s
+  - Implemented JWT auth and RBAC, eliminating unauthorized endpoint access incidents
+  - Containerized dev environment with Docker Compose, cutting onboarding from 4h to <30min
+
+- **Backend Developer Intern** (May 2022 – Jun 2022) - Developer Experience Hub (Rajshahi, Bangladesh)
+  - Built multi-vendor dental management system with Django, GraphQL, RBAC
+  - Fixed 30+ production performance issues; improved test coverage from 42% to 85%
+
+- **IT Executive (Linux Systems)** (Feb 2018 – Feb 2020) - Gradient IT Solutions (Uttara, Dhaka)
+  - Administered Linux servers, DNS, mail services, cPanel/WHM
+  - Automated ops tasks with Bash, reducing ticket resolution time by 40%
+  - Automated backups for 30+ websites, improving RPO from 24h to under 1h
 
 ### Technical Skills
-- **Primary:** [YOUR_PRIMARY_SKILLS]
-- **Secondary:** [YOUR_SECONDARY_SKILLS]
-- **Domain:** [YOUR_DOMAIN_EXPERTISE]
-- **Software:** [YOUR_TOOLS_AND_SOFTWARE]
+- **Primary:** Python (Django, FastAPI, Celery, DRF), PostgreSQL, Redis, Docker, Kubernetes (k3s), AWS (ECS, EC2, RDS), Git, CI/CD (GitHub Actions, GitLab CI, Argo CD, FluxCD)
+- **Secondary:** Rust (Axum), GraphQL, gRPC, WebSocket, RabbitMQ, NoSQL, Terraform OSS, Helm, CloudNativePG
+- **Domain:** E-commerce systems, POS & inventory, real-time systems, microservices architecture, payment gateways (Bangladesh market), Linux systems administration
+- **Software:** VS Code, LaTeX (moderncv)
 
 ### Certifications
-<!-- List relevant certifications with dates -->
-- **[CERTIFICATION_NAME]** - [HOURS]h - completed [DATE]
+None
 
 ### Publications
-<!-- List peer-reviewed publications, if any -->
-- [AUTHOR_LIST] ([YEAR]). [TITLE]. [JOURNAL].
+None
 
 ### Awards
-<!-- List relevant awards, hackathons, competitions -->
-- [AWARD_NAME] - [EVENT] ([YEAR])
+None
 
 ### Behavioral Profile
-<!-- Your behavioral assessment results (PI, DISC, Myers-Briggs, or self-assessment) -->
-- **[TRAIT_1]** - [DESCRIPTION]
-- **[TRAIT_2]** - [DESCRIPTION]
-- **Strengths:** [YOUR_STRENGTHS]
-- **Growth areas:** [YOUR_GROWTH_AREAS]
-- **Thrives in:** [YOUR_IDEAL_ENVIRONMENT]
+- **Pragmatic builder** - prefers solving real problems with working code over abstract architecture
+- **Ownership-driven** - takes end-to-end responsibility from design through production
+- **Growth-oriented** - actively mentoring junior engineers and improving team practices
+- **Strengths:** Full-stack backend delivery, infrastructure automation, cloud cost optimization, team leadership
+- **Growth areas:** Mobile development, product management, advanced ML/AI
+- **Thrives in:** Startup environments, cross-functional collaboration, fast-paced iteration cycles
 
 ### What Excites You
-<!-- What motivates you professionally -->
-- [PASSION_1]
-- [PASSION_2]
+- Building systems that scale to serve real users at high concurrency
+- Architecting microservices that are observable, secure, and maintainable
+- Solving infrastructure problems that unlock velocity for development teams
+- Working on meaningful products in domains like education, healthcare, and e-commerce
 
 ### Target Sectors
-<!-- Industries and companies you're targeting -->
-- [SECTOR_1]: [EXAMPLE_COMPANIES]
-- [SECTOR_2]: [EXAMPLE_COMPANIES]
+- **Web-scale backend engineering:** Kirrhosoft, Care-Box, startups
+- **DevOps/SRE:** Infrastructure-heavy companies, SaaS platforms
+- **E-commerce/retail tech:** High-traffic transaction processing
+- **Health-tech:** Digital healthcare platforms
 
 ### Deal-breakers
-<!-- Hard constraints on job search. Language requirements are handled separately and
-automatically from your Languages table above - don't duplicate them here. -->
-- [DEALBREAKER_1]
-- [DEALBREAKER_2]
+- On-site requirement outside Dhaka metro area
+- Roles requiring relocation outside Bangladesh
+- Companies with documented toxic culture or excessive unpaid overtime
 
 ## Repo Structure
 - `cv/` - LaTeX CV variants (moderncv template, banking style)

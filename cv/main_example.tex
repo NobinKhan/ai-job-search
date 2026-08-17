@@ -1,8 +1,7 @@
-%% Example CV - [YOUR_NAME]
+%% Example CV - MD. Nazrul Islam Khan
 %% Comprehensive overview of all competencies, experience, and achievements.
 %% Use as a master reference when tailoring role-specific CVs.
 %%
-%% SETUP: Run /setup to populate this with your actual information.
 %% Compile with: lualatex main_example.tex
 %% (pdflatex often fails on modern MiKTeX with fontawesome5 font-expansion errors.)
 
@@ -33,23 +32,22 @@
     linkcolor=blue,
     filecolor=magenta,
     urlcolor=blue,
-    pdftitle={[YOUR_NAME] - CV},
+    pdftitle={Nazrul Islam Khan - CV},
     % Keep pdfpagemode=UseNone: this block runs after moderncv's own
     % \AtEndPreamble (moderncv.cls sets pdfpagemode there), so a FullScreen
     % value here would win and open every CV in fullscreen presentation mode.
     pdfpagemode=UseNone,
 }}
-\usepackage[scale=0.80]{geometry}
+\usepackage[scale=0.77]{geometry}
 \usepackage{import}
+\usepackage{needspace}
 
 % personal data
-\name{[First]}{[Last]}
-% If you have no address to list, DELETE this whole line. \address{}{}{} fails
-% with "There's no line here to end" on every moderncv version.
-\address{[Your Address, City, Country]}{}{}
-\phone[mobile]{[+XX XXXXXXXXXX]}
-\email{[your.email@example.com]}
-\extrainfo{\href{[https://linkedin.com/in/your-profile]}{LinkedIn}, \href{[https://github.com/your-username]}{GitHub}}
+\name{MD.\ Nazrul}{Islam Khan}
+\address{Dhaka, Bangladesh}{}{}
+\phone[mobile]{+8801754730922}
+\email{nazrulkhan.dk@gmail.com}
+\extrainfo{\href{https://www.linkedin.com/in/nobinbd/}{LinkedIn}, \href{https://github.com/NobinKhan}{GitHub}}
 
 \begin{document}
 
@@ -60,7 +58,7 @@
 % ============================================================
 
 \vspace{6pt}
-\small{[Write a 3-5 line profile statement tailored to the role you're applying for. Focus on what makes you uniquely qualified. Example: "Data scientist with a PhD in [field] and X years of industry experience. Combines deep domain expertise in [domain] with strong applied machine learning and Python development skills. Experienced in developing end-to-end ML pipelines, from data ingestion to stakeholder-facing dashboards."]}
+\small{Backend and DevOps Engineer with 5+ years of experience spanning Linux systems administration and 3+ years building, scaling, and operating production backend systems. Strong background in Python, Django, FastAPI, PostgreSQL, Redis, Celery, Docker, Kubernetes, CI/CD, AWS, and Linux. Proven record of migrating monoliths to microservices, reducing API latency by 42\%, supporting 10k--50k concurrent users, automating zero-downtime deployments, and improving reliability, security, and delivery speed across e-commerce, POS, inventory, warehouse, and health-tech platforms.}
 
 % ============================================================
 %     CORE COMPETENCIES
@@ -70,15 +68,17 @@
 \vspace{1pt}
 \begin{itemize}
 
-\item \textbf{[Skill Category 1]}: [Specific skills, frameworks, tools. Be concrete.]
+\item \textbf{Python Backend}: Django, FastAPI, DRF, Django Ninja, Celery, REST, GraphQL, gRPC, WebSocket
 
-\item \textbf{[Skill Category 2]}: [Specific skills, frameworks, tools.]
+\item \textbf{Infrastructure \& DevOps}: Docker, Kubernetes (k3s), AWS (ECS, EC2, RDS), Terraform OSS, Helm, CloudNativePG, FluxCD, Argo CD, GitHub Actions, GitLab CI, GitOps
 
-\item \textbf{[Skill Category 3]}: [Specific skills, frameworks, tools.]
+\item \textbf{Data Layer}: PostgreSQL, Redis, RabbitMQ, SQL, NoSQL, ORM
 
-\item \textbf{[Skill Category 4]}: [Domain expertise, methods, approaches.]
+\item \textbf{Security \& Observability}: JWT, RBAC, Keycloak, OAuth2, Prometheus, Grafana, Infisical, SSLCommerz
 
-\item \textbf{[Skill Category 5]}: [Tools, platforms, software.]
+\item \textbf{Languages}: Python (expert), Rust (proficient), Java (familiar), Bash (expert)
+
+\item \textbf{Domain Expertise}: E-commerce systems, POS, inventory and warehouse management, real-time systems, microservices architecture, payment gateway integration
 
 \end{itemize}
 
@@ -91,31 +91,75 @@
 \begin{itemize}
 
 % --- Most Recent Role ---
-\item{\cventry{[YYYY-Present]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+\item{\cventry{Sep 2025--Present}{Backend \& DevOps Developer}{Flyger Holidays Limited}{Bangladesh}{}{
+\vspace{1pt}
 \begin{itemize}
-    \item [Achievement or responsibility 1 - be specific, use numbers where possible]
-    \item [Achievement or responsibility 2]
-    \item [Achievement or responsibility 3]
-    \item [Achievement or responsibility 4]
+    \item Architecting and building a microservices-based Learning Management System (LMS) designed for scalability, maintainability, and high performance.
+    \item Deploying and operating services on a 5-node k3s cluster using FluxCD for GitOps, CloudNativePG for database management, and Infisical for secrets management.
+    \item Implementing Kubernetes-native infrastructure, service routing, and load-balancing strategies to improve reliability and support future scale.
 \end{itemize}}}
 
 \vspace{3pt}
 
 % --- Previous Role ---
-\item{\cventry{[YYYY-YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+\item{\cventry{Jul 2023--Sep 2025}{Backend Developer}{Care-Box Limited}{Dhaka, Bangladesh}{}{
+\vspace{1pt}
 \begin{itemize}
-    \item [Achievement or responsibility 1]
-    \item [Achievement or responsibility 2]
-    \item [Achievement or responsibility 3]
+    \item Architected and executed the migration of a monolithic e-commerce platform to Dockerized microservices orchestrated on AWS ECS, scaling from 10k to 50k concurrent users during flash sales.
+    \item Reduced average API latency by 42\% through asynchronous task processing with Celery and Redis, plus PostgreSQL query optimization.
+    \item Designed end-to-end CI/CD pipelines using GitHub Actions and Argo CD, increasing deployment frequency from weekly to multiple times per day with zero downtime.
+    \item Led a 6-member backend squad and introduced pull request templates, automated linting, and stronger engineering workflows.
+    \item Optimized cloud spend by right-sizing AWS EC2 and RDS instances and introducing spot nodes, reducing monthly costs by about 25\%.
+    \item Implemented Redis cache-aside patterns and WebSocket channels for real-time inventory updates across commerce workflows.
+    \item Automated blue-green deployments with Docker Compose and GitHub Actions, cutting rollback time from 15 minutes to under 2 minutes.
 \end{itemize}}}
 
 \vspace{3pt}
 
 % --- Earlier Role ---
-\item{\cventry{[YYYY-YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+\item{\cventry{Sep 2022--Jul 2023}{Junior Backend Developer}{Care-Box Limited}{Dhaka, Bangladesh}{}{
+\vspace{1pt}
 \begin{itemize}
-    \item [Achievement or responsibility 1]
-    \item [Achievement or responsibility 2]
+    \item Built an RFID-based warehouse tracking system for the Singapore government (RBITS PUB) using Django, PostgreSQL, and Redis.
+    \item Developed a live doctor consultation platform with digital prescription generation, OAuth2 authentication, and SSLCommerz payment integration.
+    \item Introduced Celery workers for asynchronous order processing, reducing checkout time by 35\%.
+    \item Set up GitLab CI pipelines with automated testing, security scanning, and containerized builds.
+\end{itemize}}}
+
+\vspace{3pt}
+
+% --- Earlier Role ---
+\item{\cventry{Jul 2022--Sep 2022}{Backend Developer Intern}{Care-Box Limited}{Dhaka, Bangladesh}{}{
+\vspace{1pt}
+\begin{itemize}
+    \item Developed RESTful APIs with Django REST Framework for catalog, cart, and checkout modules.
+    \item Collaborated with the React frontend team to optimize GraphQL queries, reducing response payload size by 60\% and page load time by 1.2 seconds.
+    \item Implemented JWT-based authentication and role-based permissions, eliminating unauthorized endpoint access incidents during penetration testing.
+    \item Containerized the local development environment with Docker Compose, reducing new-developer onboarding time from 4 hours to under 30 minutes.
+\end{itemize}}}
+
+\vspace{3pt}
+
+% --- Earlier Role ---
+\item{\cventry{May 2022--Jun 2022}{Backend Developer Intern}{Developer Experience Hub}{Rajshahi, Bangladesh}{}{
+\vspace{1pt}
+\begin{itemize}
+    \item Developed a multi-vendor dental management system using Python, Django, and GraphQL with role-based access control.
+    \item Resolved 30+ production issues related to slow ORM queries and application performance.
+    \item Secured a multi-vendor GraphQL API with row-level permissions, reducing unauthorized data leaks to zero during QA.
+    \item Introduced automated tests and pre-commit hooks (Black, isort, flake8), improving code coverage from 42\% to 85\% within four weeks.
+\end{itemize}}}
+
+\vspace{3pt}
+
+% --- Earlier Role ---
+\item{\cventry{Feb 2018--Feb 2020}{IT Executive (Linux Systems)}{Gradient IT Solutions}{Uttara, Dhaka}{}{
+\vspace{1pt}
+\begin{itemize}
+    \item Administered Linux servers (Ubuntu and CentOS), DNS, mail services (Postfix and Dovecot), and cPanel/WHM hosting environments.
+    \item Automated routine operational tasks with Bash scripts, reducing ticket resolution time by 40\%.
+    \item Automated nightly backups of 30+ cPanel-hosted websites, improving recovery-point objective (RPO) from 24 hours to under 1 hour.
+    \item Rolled out log monitoring for Linux email servers and supported deployment of new mail services.
 \end{itemize}}}
 
 \end{itemize}
@@ -128,14 +172,9 @@
 \vspace{1pt}
 \begin{itemize}
 
-\item{\cventry{[YYYY-YYYY]}{[Degree] in [Field]}{[Institution]}{[City, Country]}{}{\vspace{1pt}
-Thesis: ``[Thesis Title].'' [Brief description of research focus.]
-}}
-
-\vspace{3pt}
-
-\item{\cventry{[YYYY-YYYY]}{[Degree] in [Field]}{[Institution]}{[City, Country]}{}{\vspace{1pt}
-[Brief description or key topics.]
+\item{\cventry{2014--2018}{BSc in Computer Science and Engineering}{Shanto-Mariam University of Creative Technology}{Dhaka, Bangladesh}{}{
+\vspace{1pt}
+Key topics: Data structures, algorithms, database systems, software engineering, computer networks, operating systems
 }}
 
 \end{itemize}
@@ -147,28 +186,41 @@ Thesis: ``[Thesis Title].'' [Brief description of research focus.]
 \section{Languages}
 \vspace{1pt}
 \begin{itemize}
-\item [Language 1] (native), [Language 2] (fluent), [Language 3] (intermediate).
+\item English (professional working proficiency, C1), Bengali (native)
 \end{itemize}
 
 % ============================================================
 %     PUBLICATIONS (optional)
 % ============================================================
 
-\section{Publications}
+% ============================================================
+%     OPEN SOURCE
+% ============================================================
+
+\section{Open Source}
 \vspace{1pt}
 \begin{itemize}
-\item [Author(s)] ([Year]). [Title]. [Journal/Conference]. \href{[DOI_URL]}{DOI link}
+\item \textbf{bd-payment-gateway}: Author of a Python library for integrating Bangladeshi payment gateways, published on PyPI.
+\item \textbf{pysslcmz}: Developed and maintained an open-source SSLCommerz package for Python 3.10+.
+\item \textbf{ferriskey}: Active contributor to a Rust IAM solution focused on secure system utilities, system auditing, and performance improvements.
+\end{itemize}
+
+% ============================================================
+%     SELECTED PROJECTS
+% ============================================================
+
+\section{Selected Projects}
+\vspace{1pt}
+\begin{itemize}
+\item \textbf{E-commerce system with POS, inventory, and warehouse management}: Built and scaled backend services supporting high-traffic retail operations and real-time inventory flows.
+\item \textbf{Live doctor consultation system with digital prescription}: Delivered backend features for appointments, prescription generation, authentication, and payments.
+\item \textbf{RBITS PUB RFID asset verification system}: Developed warehouse and asset-tracking capabilities for a Singapore government use case.
+\item \textbf{Dental multi-vendor patient management system}: Built a Django and GraphQL-based platform with RBAC and improved query performance.
 \end{itemize}
 
 % ============================================================
 %     HONORS AND AWARDS (optional)
 % ============================================================
-
-\section{Honors and Awards}
-\vspace{1pt}
-\begin{itemize}
-\item{\textbf{[Award Name]} -- [Event/Organization] ([Year]).}
-\end{itemize}
 
 % ============================================================
 %     REFERENCES
