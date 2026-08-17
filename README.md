@@ -391,7 +391,20 @@ The framework supports two distinct modes of job searching:
 
 To get the most from this, invest time during `/setup` in describing not just your experience, but what energized you, what drained you, and what you'd want more of. This context directly shapes how the system evaluates fit and which roles it surfaces during `/scrape`.
 
-## Contributing
+## Upstream
+
+This branch is forked from [`MadsLorentzen/ai-job-search`](https://github.com/MadsLorentzen/ai-job-search).
+
+**Base commit:** [`5c423b4`](https://github.com/MadsLorentzen/ai-job-search/commit/5c423b4064f5b489a6b7439d77699a28c6df6d6b) — merged upstream `master` into this branch.
+
+To check how far behind upstream you are:
+
+```bash
+git fetch origin
+git log --oneline origin/master..master
+```
+
+A count of zero means this branch is up to date with upstream.
 
 Thinking about a PR? Read [CONTRIBUTING.md](CONTRIBUTING.md) first - it explains what gets merged, what lives in forks, and why.
 
