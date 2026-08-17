@@ -15,6 +15,15 @@ per-file diff commands.
 
 ### Changed
 
+- **Job matching reframed around function, not title** (`framework_version` 1.2.2 -> 1.2.3 in
+  `04-job-evaluation.md`) - title-lookalike matching throws away career capital that doesn't
+  fit one job-title box (e.g. a background spanning research leadership, platform ownership,
+  and program management gets collapsed into whichever single title sounds closest). `/setup`,
+  `search-queries.md`, and `04-job-evaluation.md` now guide the candidate to define priority
+  categories by function - the kind of problem a role solves - and to list several plausible
+  job titles as query variants within each category, rather than betting an entire priority
+  tier on one exact title string.
+
 - **CONTRIBUTING: invited PRs are reserved for the invitee** - when a maintainer comment
   explicitly invites a named contributor to implement an issue they diagnosed or designed,
   the implementation is theirs for a stated window (default seven days, longer on request);
@@ -22,6 +31,45 @@ per-file diff commands.
   arrival order. Prospective from 2026-08-14. Sits alongside the existing credit norm.
 
 ### Fixed
+
+- **The `/html-report` dashboard now reads and renders the tracker's `deadline`** (follow-up to
+  #319). The tracker gained a fourteenth `deadline` column and every other consumer (`/outcome`,
+  `/upskill`, `/notion-sync`) was updated to know it, but the dashboard's Step 1 field
+  enumeration and Step 3 table columns still listed the original thirteen - the one surface
+  where the column could not be seen at all, so a `drafted` application's clock stayed invisible
+  in the report that reviews the pipeline end to end. The Step 1 enumeration now matches the
+  canonical 14-column header and the applications table can show a `Deadline` column, subject to
+  the existing empty-column rule. Pinned by `tests/test_html_report_command.py` so a future
+  column addition cannot silently vanish from the dashboard again.
+
+- **Application deadlines are written down at every moment the framework provably holds them**
+  (#319). `/scrape` fetched the deadline and rendered it in a table, `/rank` turned it into the 🔥
+  urgency marker and the expiry check, and nothing stored it - so the marker fired exactly once,
+  every later run had to re-fetch a posting that might have expired to recover the date, and a
+  `drafted` application (whose only applicable clock is its deadline) had no time-based signal at
+  all. `seen_jobs.json` entries now carry a `deadline` (base field, written on first sight,
+  refreshed by `/rank` Step 4, `null` vs missing distinguished and never guessed); `/rank` Step 3
+  re-derives urgency from the stored value with no re-fetch and sweeps already-ranked entries past
+  their deadline into `expired`; the tracker gains a fourteenth `deadline` column appended last,
+  with a header-line-only migration for existing trackers; `/apply` Step 0 extracts the deadline
+  and Step 6b writes it (including the `/scrape` path via the assistant SKILL.md); `/outcome`
+  surfaces it on open rows and flags near/passed deadlines on `drafted` rows without changing the
+  no-follow-up rule; and the row-rewriting paths (`/outcome` Step 4, `/gmail-sync` Step 7a) now
+  preserve every unparsed field so the new column survives the first status update. `/notion-sync`
+  names the tracker as the Deadline source (tracker wins), `/upskill`'s column list stays true, and
+  `job-application-assistant/SKILL.md` bumps `framework_version` 1.3.2 → 1.3.3. Pinned by
+  `tests/test_rank_command.py`, `tests/test_apply_records_application.py`, and
+  `tests/test_upskill_skill.py`.
+
+  The sweep's edges are stated rather than left to the reader: an entry with no stored `deadline`
+  is left alone and never inferred from another field (the majority case, since most entries
+  predate the column), `--all` re-scores any status including `expired` so a swept job is
+  recoverable, and `/rank` Step 4's idempotency rule now names the sweep as its deliberate
+  exception instead of contradicting it. Step 5 reports how many entries were swept and how many
+  were retired, so an automated status change is never silent. `/outcome` Step 1 states that the
+  header append is the one edit it may make outside a matched row, so it does not read as a
+  violation of Step 4's own "never restructure the CSV". `/notion-sync` forbids reconciling two
+  disagreeing deadlines by taking the earlier or later of them.
 
 - **`convert_salary_excel.py` no longer misreads whole-thousands cells from a Danish-locale
   export** - a cell like `60.000` (thousands separator, no decimal comma) was handed to
